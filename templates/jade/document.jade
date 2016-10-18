@@ -80,6 +80,10 @@ html(lang=node.document.$attr("lang", "en") )
           parallaxBackgroundImage: '#{node.$attr('revealjs_parallaxbackgroundimage', '') }',
           // Parallax background size in CSS syntax (e.g., "2100px 900px")
           parallaxBackgroundSize: '#{node.$attr('revealjs_parallaxbackgroundsize', '') }',
+          // Exposes the reveal.js API through window.postMessage
+          postMessage: #{node.$attr('revealjs_postmessage', 'true') },
+          // Dispatches all reveal.js events to the parent window through postMessage
+          postMessageEvents: #{node.$attr('revealjs_postmessageevents', 'false') },
           // Optional libraries used to extend on reveal.js
           dependencies: [
             {
